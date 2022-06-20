@@ -1,0 +1,19 @@
+{
+    "name": "genesisoft/mpmoipext",
+    "description": "Módulo que estende Webkul Marketplace para o MOIP",
+    "type": "magento2-module",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {"genesisoft/base": "^1.0",
+                "genesisoft/formsbr": "^1.0",
+                "webkul/module-marketplace": "~2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Genesisoft\\MpMoipExt\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}

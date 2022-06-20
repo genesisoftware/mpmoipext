@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Webkul\MpMoip\Helper\Data">
+        <plugin name="moiphelper" type="Genesisoft\MpMoipExt\Plugin\Helper\Data"/>
+    </type>
+    <type name="Magento\Framework\DataObject">
+        <plugin name="moipsaleperpartner" type="Genesisoft\MpMoipExt\Plugin\Model\Saleperpartner" disabled="true"/>
+    </type>
+    <type name="Webkul\Marketplace\Observer\SalesOrderPlaceAfterObserver">
+        <plugin name="moipSalesOrderPlaceAfterObserver" type="Genesisoft\MpMoipExt\Plugin\Observer\SalesOrderPlaceAfterObserver"/>
+    </type>
+
+    <preference for="Webkul\MpMoip\Helper\Data" type="Genesisoft\MpMoipExt\Helper\Data"/>
+    <preference for="Webkul\MpMoip\Model\PaymentBoleto" type="Genesisoft\MpMoipExt\Model\PaymentBoleto"/>
+    <preference for="Webkul\MpMoip\Controller\Notification\Authorized" type="Genesisoft\MpMoipExt\Controller\Notification\Authorized"/>
+    <preference for="Webkul\MpMoip\Model\MoipCcConfigProvider" type="Genesisoft\MpMoipExt\Model\MoipCcConfigProvider"></preference>
+    <preference for="Webkul\MpMoip\Model\MoipBoletoConfigProvider" type="Genesisoft\MpMoipExt\Model\MoipBoletoConfigProvider"></preference>
+</config>
